@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Auth;
 
-class Ping extends Controller
+class PingController extends Controller
 {
     /**
      * Display a listing of the resource.
