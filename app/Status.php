@@ -11,12 +11,11 @@ class Status extends Authenticatable
     use Notifiable;
     protected $table = 'status';
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
     protected $fillable = [
         'name', 'color'
     ];
+
+    public function tickets() {
+        return $this->hasMany('App\Ticket');
+    }
 }

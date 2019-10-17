@@ -9,19 +9,9 @@
         <title> ModularAdmin - Free Dashboard Theme | HTML Version </title>
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <link rel="stylesheet" href="css/vendor.css">
-        
-        <script>
-            var themeSettings =  (localStorage.getItem('themeSettings')) ? JSON.parse(localStorage.getItem('themeSettings')) : {};
-			var themeName = themeSettings.themeName || '';
+        <link rel="stylesheet" href="{{ asset('css/vendor.css') }}">
+        <link rel="stylesheet" id="theme-style" href="{{ asset('css/app-red.css') }}">
 
-			if (themeName) {
-				document.write('<link rel="stylesheet" id="theme-style" href="css/app-' + themeName + '.css">');
-			}
-			else {
-				document.write('<link rel="stylesheet" id="theme-style" href="css/app.css">');
-			}
-		</script>
 
     </head>
     <body>
@@ -123,7 +113,7 @@
                 <div class="color-secondary"></div>
             </div>
         </div>
-        <script src="js/vendor.js"></script>
-        <script src="js/app.js"></script>
+        <script src="{{ asset('js/vendor.js') }}"></script>
+        <script src="{{ asset('js/app.js') }}"></script>
     </body>
 </html>

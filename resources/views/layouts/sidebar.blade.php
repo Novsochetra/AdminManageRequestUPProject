@@ -13,13 +13,23 @@
         </div>
         <nav class="menu">
             <ul class="sidebar-menu metismenu" id="sidebar-menu">
-                <li class="active">
-                    <a href="index.html">
+                <li class="{{ request()->is('dashboard') || request()->is('/') ? 'active' : '' }}">
+                    <a href="/dashboard">
                         <i class="fa fa-home"></i> Dashboard </a>
                 </li>
-                <li>
-                    <a href="">
+                <li class="{{ request()->is('tickets') ? 'active' : '' }}">
+                    <a href="/tickets">
                         <i class="fa fa-th-large"></i> Tickets
+                    </a>
+                </li>
+                <li class="{{ request()->is('status') ? 'active' : '' }}">
+                    <a href="/status">
+                        <i class="fa fa-th-large"></i> Status
+                    </a>
+                </li>
+                <li class="{{ request()->is('priority') ? 'active' : '' }}">
+                    <a href="/priority">
+                        <i class="fa fa-th-large"></i> Priority
                     </a>
                 </li>
                

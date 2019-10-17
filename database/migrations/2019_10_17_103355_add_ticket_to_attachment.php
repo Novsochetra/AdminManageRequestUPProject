@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCommentTable extends Migration
+class AddTicketToAttachment extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,9 @@ class CreateCommentTable extends Migration
      */
     public function up()
     {
-        Schema::create('comment', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->timestamps();
-
-            $table->string('content');
+        Schema::table('attachment', function (Blueprint $table) {
+            $table->unsignedBigInteger('ticket_id');
+            $table->foreign('ticket_id')->references('id')->on('tickets');
         });
     }
 
@@ -28,6 +26,8 @@ class CreateCommentTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('comment');
+        Schema::table('attachment', function (Blueprint $table) {
+            //
+        });
     }
 }

@@ -4,8 +4,8 @@
 @section('content')
    
 <article class="content cards-page">
-    <div class="title-block">
-      <h3 class="title"> Dashboard </h3>
+   <div class="title-block">
+      <h3 class="title"> Ticket </h3>
     </div>
     <section class="section">
         <div class="row">

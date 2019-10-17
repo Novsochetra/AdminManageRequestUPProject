@@ -11,12 +11,11 @@ class Priority extends Authenticatable
     use Notifiable;
     protected $table = 'priority';
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
     protected $fillable = [
         'name', 'color'
     ];
+
+    public function tickets() {
+        return $this->hasMany('App\Ticket');
+    }
 }
