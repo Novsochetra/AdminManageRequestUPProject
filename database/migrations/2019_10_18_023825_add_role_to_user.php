@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddTicketToAttachment extends Migration
+class AddRoleToUser extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class AddTicketToAttachment extends Migration
      */
     public function up()
     {
-        Schema::table('attachment', function (Blueprint $table) {
-            $table->unsignedBigInteger('ticket_id');
-            $table->foreign('ticket_id')->references('id')->on('tickets')->nullable();
+        Schema::table('users', function (Blueprint $table) {
+            $table->unsignedBigInteger('role_id');
+            $table->foreign('role_id')->references('id')->on('role')->nullable();
         });
     }
 
@@ -26,7 +26,7 @@ class AddTicketToAttachment extends Migration
      */
     public function down()
     {
-        Schema::table('attachment', function (Blueprint $table) {
+        Schema::table('user', function (Blueprint $table) {
             //
         });
     }

@@ -12,6 +12,27 @@ class StatusTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(Status::class, 3)->create();
+        // factory(Status::class, 3)->create();
+
+        Status::create([
+            "name" => "Open",
+            "color" => "#000"
+        ]);
+
+        Status::create([
+            "name" => "Doing",
+            "color" => "#000"
+        ]);
+
+        Status::create([
+            "name" => "Resolved",
+            "color" => "#000"
+        ]);
+
+        Status::create([
+            "name" => "Closed",
+            "color" => "#000"
+        ]);
+
     }
 }

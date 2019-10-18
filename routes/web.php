@@ -18,3 +18,7 @@ Route::get('/dashboard', 'HomeController@index');
 Route::resource('tickets', 'TicketController');
 Route::resource('status', 'StatusController');
 Route::resource('priority', 'PriorityController');
+Route::resource('roles', 'RoleController');
+Route::resource('permissions', 'RolePermissionController');
+Route::resource('comments', 'CommentController');
+Route::resource('users', 'UserController');

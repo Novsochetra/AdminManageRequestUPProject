@@ -21,7 +21,7 @@ class CreateTicketTable extends Migration
             $table->string('title');
             $table->string('description');
             $table->integer('request_by');
-            $table->integer('solve_by');
+            $table->integer('solve_by')->nullable();;
             $table->timestamps();
             
         });

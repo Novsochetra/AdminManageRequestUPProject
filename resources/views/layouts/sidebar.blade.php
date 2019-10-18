@@ -8,7 +8,7 @@
                     <span class="l l3"></span>
                     <span class="l l4"></span>
                     <span class="l l5"></span>
-                </div> Modular Admin
+                </div> Manage Request
             </div>
         </div>
         <nav class="menu">
@@ -19,17 +19,17 @@
                 </li>
                 <li class="{{ request()->is('tickets') ? 'active' : '' }}">
                     <a href="/tickets">
-                        <i class="fa fa-th-large"></i> Tickets
+                        <i class="fa fa-file-o"></i> Tickets
                     </a>
                 </li>
                 <li class="{{ request()->is('status') ? 'active' : '' }}">
                     <a href="/status">
-                        <i class="fa fa-th-large"></i> Status
+                        <i class="fa fa-comment"></i> Status
                     </a>
                 </li>
                 <li class="{{ request()->is('priority') ? 'active' : '' }}">
                     <a href="/priority">
-                        <i class="fa fa-th-large"></i> Priority
+                        <i class="fa fa-check"></i> Priority
                     </a>
                 </li>
                
@@ -40,11 +40,13 @@
                     </a>
                     <ul class="sidebar-nav">
                         <li>
-                            <a href="items-list.html"> <i class="fa fa-key"></i> Privilege </a>
+                            <a href="/users"> <i class="fa fa-users"></i> Users </a>
                         </li>
                         <li>
-                            {{-- <i class="fa fa-users"></i> User <i class="fa arrow"></i> --}}
-                            <a href="items-list.html"> <i class="fa fa-users"></i> Users </a>
+                            <a href="/roles"> <i class="fa fa-users"></i> Roles </a>
+                        </li>
+                        <li>
+                            <a href="/permissions"> <i class="fa fa-key"></i> Permissions </a>
                         </li>
                     </ul>
                 </li>

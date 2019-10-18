@@ -15,7 +15,7 @@ class AddCommentToAttachment extends Migration
     {
         Schema::table('attachment', function (Blueprint $table) {
             $table->unsignedBigInteger('comment_id');
-            $table->foreign('comment_id')->references('id')->on('comment');
+            $table->foreign('comment_id')->references('id')->on('comment')->nullable();
         });
     }
 
